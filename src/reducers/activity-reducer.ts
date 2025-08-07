@@ -19,7 +19,7 @@ export const initialState : ActivityState = {
   activities: localStorageActivities(),
   activeId: ""
 }
-export const activityReducer = (
+export const activityReducer : React.Reducer<ActivityState, ActivityActions> = (
   state: ActivityState = initialState,
   action: ActivityActions) => {
   switch (action.type) {
